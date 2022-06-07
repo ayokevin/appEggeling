@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Card, Form, Container } from 'react-bootstrap'
+import React, { useState } from 'react';
+import { Card, Form, Container } from 'react-bootstrap';
 import { VestInfo } from './VestInfo';
 
 
@@ -11,12 +11,14 @@ export const Search = () => {
         setFields({
             numberCardH: e.target.value
         })
-    }
+    };
 
     return (
         <Container>
             <Card style={{ padding: '10px' }} >
-                <h3><strong>Busqueda por numero de tarjeta</strong></h3>
+                <h3>
+                    <strong>Busqueda por numero de tarjeta</strong>
+                </h3>
                 <Form.Group>
                     <Form.Label># Tarjeta</Form.Label>
                     <Form.Control

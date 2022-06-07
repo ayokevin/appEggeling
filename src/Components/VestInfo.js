@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import { Container, Card, ListGroup } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react';
+import { Container, Card, ListGroup } from 'react-bootstrap';
 
-import vip from '../img/emperator_quality_to_fit.png'
-import emperator_t_shirt from '../img/emperator_t_shirt.png'
-import spartan_guardian from '../img/spartan_guardian.png'
-import pretorian_seal from '../img/pretorian_seals.png'
-import pretorian_urban from '../img/pretorian_urban_tactics.png'
+import vip from '../img/emperator_quality_to_fit.png';
+import emperator_t_shirt from '../img/emperator_t_shirt.png';
+import spartan_guardian from '../img/spartan_guardian.png';
+import pretorian_seal from '../img/pretorian_seals.png';
+import pretorian_urban from '../img/pretorian_urban_tactics.png';
 
 export const VestInfo = ({ numberCardH }) => {
 
-   
     const [search, setSearch] = useState(false);
     const [dataSee, setDataSee] = useState({ numberCardH: '', numberCardD: '', serial: '', ManufacturingDate: '', WarrantyExpirationDate: '', img: '' });
 
@@ -24,7 +23,7 @@ export const VestInfo = ({ numberCardH }) => {
 
         if (numberCardH !== '') {
             const filterData = data.filter(data => data.numberCardH === numberCardH);
-            if (filterData.length>0) {
+            if (filterData.length > 0) {
                 setDataSee({
                     numberCardH: filterData[0].numberCardH,
                     numberCardD: filterData[0].numberCardD,
@@ -41,7 +40,7 @@ export const VestInfo = ({ numberCardH }) => {
             setSearch(false);
         }
 
-    }, [numberCardH])
+    }, [numberCardH]);
 
 
     return (
