@@ -9,20 +9,22 @@ import pretorian_urban from '../img/pretorian_urban_tactics.png'
 
 export const VestInfo = ({ numberCardH }) => {
 
-    const data = [{ numberCardH: '05CE5D', numberCardD: '380509 552829', serial: 'L374-601', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: vip },
-    { numberCardH: '05CE5E', numberCardD: '380510 552830', serial: 'L374-602', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: emperator_t_shirt },
-    { numberCardH: '05CE5F', numberCardD: '380511 552831', serial: 'L374-603', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: spartan_guardian },
-    { numberCardH: '05CE60', numberCardD: '380512 552832', serial: 'L374-604', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: pretorian_seal },
-    { numberCardH: '05CE61', numberCardD: '380513 552833', serial: 'L374-605', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: pretorian_urban },
-    ]
+   
     const [search, setSearch] = useState(false);
     const [dataSee, setDataSee] = useState({ numberCardH: '', numberCardD: '', serial: '', ManufacturingDate: '', WarrantyExpirationDate: '', img: '' });
 
     useEffect(() => {
 
+        const data = [{ numberCardH: '05CE5D', numberCardD: '380509 552829', serial: 'L374-601', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: vip },
+        { numberCardH: '05CE5E', numberCardD: '380510 552830', serial: 'L374-602', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: emperator_t_shirt },
+        { numberCardH: '05CE5F', numberCardD: '380511 552831', serial: 'L374-603', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: spartan_guardian },
+        { numberCardH: '05CE60', numberCardD: '380512 552832', serial: 'L374-604', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: pretorian_seal },
+        { numberCardH: '05CE61', numberCardD: '380513 552833', serial: 'L374-605', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: pretorian_urban },
+        ]
+
         if (numberCardH !== '') {
             const filterData = data.filter(data => data.numberCardH === numberCardH);
-            if (filterData !== '') {
+            if (filterData.length>0) {
                 setDataSee({
                     numberCardH: filterData[0].numberCardH,
                     numberCardD: filterData[0].numberCardD,
@@ -31,11 +33,12 @@ export const VestInfo = ({ numberCardH }) => {
                     WarrantyExpirationDate: filterData[0].WarrantyExpirationDate,
                     img: filterData[0].img
                 });
-                
                 setSearch(true);
             } else {
                 setSearch(false);
             }
+        } else {
+            setSearch(false);
         }
 
     }, [numberCardH])
