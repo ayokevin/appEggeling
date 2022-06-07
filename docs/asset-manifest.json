@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/appeggeling/static/js/main.f4bb2fa6.js",
+    "static/media/spartan_guardian.png": "/appeggeling/static/media/spartan_guardian.03b0ec25580f7a346570.png",
+    "static/media/pretorian_urban_tactics.png": "/appeggeling/static/media/pretorian_urban_tactics.9d2e28de5a7d67a186ec.png",
+    "static/media/emperator_quality_to_fit.png": "/appeggeling/static/media/emperator_quality_to_fit.3c1a0cdd51eb923012d7.png",
+    "static/media/emperator_t_shirt.png": "/appeggeling/static/media/emperator_t_shirt.0ad063d177a702b6d13f.png",
+    "static/media/pretorian_seals.png": "/appeggeling/static/media/pretorian_seals.deb4154de83108504f3c.png",
+    "index.html": "/appeggeling/index.html",
+    "main.f4bb2fa6.js.map": "/appeggeling/static/js/main.f4bb2fa6.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f4bb2fa6.js"
+  ]
+}
