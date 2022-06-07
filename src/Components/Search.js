@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Card, Form, Button, Container } from 'react-bootstrap'
-import { Vest_Info } from './Vest_Info';
+import { Card, Form, Container } from 'react-bootstrap'
+import { VestInfo } from './VestInfo';
+
 
 export const Search = () => {
 
@@ -16,30 +17,26 @@ export const Search = () => {
         <Container>
             <Card style={{ padding: '10px' }} >
                 <h3><strong>Busqueda por numero de tarjeta</strong></h3>
-                
-                    <Form.Group>
-                        <Form.Label># Tarjeta</Form.Label>
-                        <Form.Control
-                            required
-                            type="text"
-                            placeholder="Ingresar el numero tarjeta"
-                            onChange={onChageCard}
-                            value={fields.numberCardH}
-                        />
-                    </Form.Group>
-                
+                <Form.Group>
+                    <Form.Label># Tarjeta</Form.Label>
+                    <Form.Control
+                        required
+                        type="text"
+                        placeholder="Ingresar el numero tarjeta"
+                        onChange={onChageCard}
+                        value={fields.numberCardH}
+                    />
+                </Form.Group>
+
             </Card>
             {
                 <Container>
-                    <Vest_Info
+                    <VestInfo
                         numberCardH={fields.numberCardH}
                     >
-                    </Vest_Info>
+                    </VestInfo>
                 </Container>
             }
         </Container >
-
-
-
     )
 }

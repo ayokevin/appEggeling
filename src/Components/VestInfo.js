@@ -7,7 +7,7 @@ import spartan_guardian from '../img/spartan_guardian.png'
 import pretorian_seal from '../img/pretorian_seals.png'
 import pretorian_urban from '../img/pretorian_urban_tactics.png'
 
-export const Vest_Info = ({ numberCardH }) => {
+export const VestInfo = ({ numberCardH }) => {
 
     const data = [{ numberCardH: '05CE5D', numberCardD: '380509 552829', serial: 'L374-601', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: vip },
     { numberCardH: '05CE5E', numberCardD: '380510 552830', serial: 'L374-602', ManufacturingDate: '05/2022', WarrantyExpirationDate: '05/2027', img: emperator_t_shirt },
@@ -20,9 +20,9 @@ export const Vest_Info = ({ numberCardH }) => {
 
     useEffect(() => {
 
-        if (numberCardH != '') {
+        if (numberCardH !== '') {
             const filterData = data.filter(data => data.numberCardH === numberCardH);
-            if (filterData != '') {
+            if (filterData !== '') {
                 setDataSee({
                     numberCardH: filterData[0].numberCardH,
                     numberCardD: filterData[0].numberCardD,
